@@ -1,4 +1,4 @@
-![[LFDT-logo.png]]
+![LFDT logo](./graphics/LFDT-logo.png)
 # LFDT European Chapter Documentation
 
 ## Contents
