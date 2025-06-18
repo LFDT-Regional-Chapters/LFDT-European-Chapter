@@ -1,4 +1,4 @@
-![LFDT logo](![LFDT logo](https://raw.githubusercontent.com/LFDT-Regional-Chapters/LFDT-European-Chapter/main/graphics/LFDT-logo.png))
+![LFDT logo](https://raw.githubusercontent.com/LFDT-Regional-Chapters/LFDT-European-Chapter/main/graphics/LFDT-logo.png)
 
 # LFDT European Chapter Documentation
 
