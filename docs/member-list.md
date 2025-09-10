@@ -11,6 +11,7 @@
 |**Przemysław Koper**|Espeo Software|Founding member|
 |**Shane Deconinck**|HOWEST University of Applied Sciences|Founding member|
 |**Patrick Van Renterghem**|HOWEST University of Applied Sciences|Founding member|
+|**Kushal Soni**|HOWEST University of Applied Sciences|Founding member|
 |**Stoyan Atipov**|Vesto Prime|Founding member|
 |**Jesus Ruiz**|Alastria Blockchain Ecosystem|Founding member|
 |**Maciej Hoffmann**|Espeo Software|Founding member / Community manager|
