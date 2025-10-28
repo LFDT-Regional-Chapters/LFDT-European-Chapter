@@ -1,0 +1,89 @@
+# Meeting Minutes – LF Decentralized Trust European Chapter Meeting - October
+
+**Date:** 22-10-2025
+**Time:** 4PM CET  
+**Location:** Online  
+**Chairperson:** Dominik Zyskowski
+
+---
+
+## Agenda Items
+
+1. Overview of Zama’s FHE architecture and ERC-7984 standard  
+2. Confidential transactions and interoperability  
+3. Ecosystem adoption and roadmap  
+4. Next steps and coordination
+
+---
+
+## Key Takeaways
+
+- Zama's FHE coprocessor architecture enables confidential transactions on any public blockchain without modifying the base layer VM.  
+- The ERC-7984 standard defines a technology-agnostic interface for confidential tokens, using "handles" to abstract away the underlying encryption method (FHE, TEE, MPC).  
+- The primary goal is to drive adoption of ERC-7984 to solve ecosystem fragmentation, which is the main barrier to confidential blockchain use cases.  
+- Zama is live on Sepolia, launching on Ethereum mainnet in weeks, and expanding to other EVMs in Q1/Q2 2025.
+
+---
+
+## Topics
+
+### The Problem: Blockchain Transparency vs. Confidentiality
+- Public blockchains are transparent by design, requiring all data to be visible for validators to verify transactions.  
+- This transparency is a barrier for enterprise use cases (e.g., banks, supply chains) that require data privacy.  
+- Zama's solution uses Fully Homomorphic Encryption (FHE) to allow computation on encrypted data without decryption.
+
+### Zama's FHE Coprocessor Architecture
+- **Compatibility:** Avoids modifying the base blockchain VM, making it compatible with any EVM.  
+- **On-Chain (e.g., Ethereum):**
+  - Smart contracts manipulate "handles," which are pointers to encrypted data.  
+  - Emit events to the coprocessor for all FHE operations (e.g., `add(handleA, handleB)`).  
+  - Store the Access Control List (ACL) for decryption permissions.  
+- **Off-Chain (FHE Coprocessor):**
+  - A decentralised L3 network of coprocessors executes FHE operations.  
+  - Stores encrypted data and reaches consensus on results before returning an encrypted output handle to the smart contract.  
+- **Decentralised Verification:** The on-chain computational graph is public, allowing independent re-execution and verification.
+
+### Input & Decryption Flows
+
+**Input Flow:**
+1. Encrypt Data – User encrypts data (e.g., 5) in their browser.  
+2. Generate ZK Proof – User creates a zero-knowledge proof that they know the clear value.  
+3. Call Gateway – User sends encrypted data and ZK proof to Zama's gateway.  
+4. Gateway Validation – Verifies proof, stores encrypted data, and returns a signed handle.  
+5. Smart Contract Call – User calls the contract with the handle and gateway signature.  
+6. On-Chain Validation – Smart contract verifies the gateway signature before using the handle.
+
+**Decryption Flow (KMS):**
+- The decryption key is sharded across MPC nodes to prevent any single party from decrypting data.  
+- **Process:**
+  1. User requests decryption.  
+  2. KMS nodes check the on-chain ACL for permission.  
+  3. If approved, nodes perform partial re-encryption.  
+  4. User aggregates and decrypts the result with their key.
+
+### ERC-7984: The Confidential Token Standard
+- Defines a technology-agnostic interface for confidential tokens.  
+- **Key Feature:** Replaces integer amounts with "handles" referencing encrypted data.  
+- **Design:** Developed with OpenZeppelin for strong alignment with existing token standards.  
+
+**Ecosystem Adoption:**
+- **Custody:** DFNS, Taurus implementing; 2 others in discussion.  
+- **Bridges:** LayerZero adopting for a confidential Omnichain Fungible Token (OFT).  
+- **Wallets:** Ongoing discussions.  
+- **Regulatory Support:** Built-in mechanism for smart contracts to authorise third-party decryption for regulatory audits.
+
+---
+
+## Next Steps
+
+- **Ghazi (Zama):**  
+  - Provide details on the gateway signature authority.  
+  - Connect with Thomas (LF Decentralized Trust) to discuss ERC-7984 standardisation.  
+
+- **Thomas (LF Decentralized Trust):**  
+  - Connect Zama with LFDT's standardisation contacts.  
+
+- **Dominik (Espeo):**  
+  - Distribute the meeting recording internally.  
+
+---
