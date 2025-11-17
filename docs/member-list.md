@@ -1,4 +1,5 @@
 # Member list
+Please note that adding your name to this list is optional; participation in the chapter is welcome regardless of whether your name is publicly listed.
 
 |Name|Affiliation|Role in the Chapter|
 |---|---|---|
