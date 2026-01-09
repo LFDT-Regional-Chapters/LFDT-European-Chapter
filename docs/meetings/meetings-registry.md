@@ -12,4 +12,4 @@ A list of all chapter meetings, with links to the individual meeting notes.
 - [2025 09 10](2025-09-10.md)
 - [2025 10 22](2025-10-22.md)
 - [2025 11 18](2025-11-18.md)
-
+- [2025 12 17](2025-12-17.md)
