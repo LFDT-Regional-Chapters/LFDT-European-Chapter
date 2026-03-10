@@ -10,7 +10,7 @@ Please note that adding your name to this list is optional; participation in the
 |**Imre Kocsis**|Budapest University of Technology and Economics|Founding member|
 |**Attila Klenik**|Budapest University of Technology and Economics|Founding member|
 |**Przemysław Koper**|Espeo Software|Founding member|
-|**Shane Deconinck**|HOWEST University of Applied Sciences|Founding member|
+|**Shane Deconinck**|Independent|Founding member|
 |**Patrick Van Renterghem**|HOWEST University of Applied Sciences|Founding member|
 |**Stoyan Atipov**|Vesto Prime|Founding member|
 |**Jesus Ruiz**|Alastria Blockchain Ecosystem|Founding member|
